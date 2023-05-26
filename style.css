@@ -1,0 +1,251 @@
+body {
+  background-color: rgba(172, 95, 1, 0.486);
+  height: 100vh;
+}
+ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 20px;
+  list-style: none;
+  margin-top: 0;
+}
+#connexion {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  background-color: rgba(128, 128, 128, 0.247);
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  border: 1px solid blue;
+  color: blue;
+  font-weight: bold;
+}
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 5px;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  background-color: rgba(128, 128, 128, 0.247);
+  width: 88%;
+  margin: auto;
+}
+.add {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+}
+.inscri {
+  display: flex;
+  flex-direction: column;
+  min-height: 50vh;
+}
+.connex {
+  display: flex;
+  flex-direction: column;
+  min-height: 50vh;
+}
+.edit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 50px;
+}
+.edit input {
+  font-family: fontawesome;
+}
+form {
+  width: 30%;
+  margin: auto;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+form div {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 10px;
+}
+a {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  color: blue;
+}
+label {
+  width: 180px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.2rem;
+}
+input {
+  height: 30px;
+  width: 200px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+#send {
+  width: 111px;
+  text-transform: uppercase;
+  font-family: fontawesome;
+  transition: 0.3s;
+  cursor: pointer;
+}
+#send:hover {
+  transform: scale(1.1);
+}
+.send {
+  width: 111px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  margin-top: 20px;
+  background-color: rgba(128, 128, 128, 0.247);
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-family: fontawesome;
+  transition: 0.3s;
+}
+.send:hover {
+  transform: scale(1.1);
+}
+.history {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+table {
+  width: 60%;
+  font-size: 1.2rem;
+  text-align: center;
+}
+a {
+  text-align: center;
+}
+h2 {
+  text-transform: uppercase;
+}
+p {
+  text-align: center;
+}
+
+
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.modal {
+  background-color: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s;
+}
+.modal.show {
+  visibility: visible;
+  opacity: 1;
+}
+.modal_content {
+  background-color: rgb(241, 229, 229);
+  max-width: 30vw;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  flex: 1;
+  height: 20vh;
+  border-radius: 5px;
+  padding: 30px;
+}
+.modal_close {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+.modal_header {
+display: flex;
+justify-content: center;
+}
+.modal_footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;  
+}
+.btn {
+  padding: 10px;
+  background-color: blue;
+  color: white;
+  width: 70px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn_close {
+  background-color: red;
+  text-align: center;
+  width: 75px;
+}
+
+@media screen and (max-width: 800px) {
+  #date {
+    min-width: 110px;
+  }
+  .modal_content {
+    font-size: 0.9rem;
+    max-width: 60vw;
+  }
+  .btn {
+    font-size: 0.7rem;
+  }
+  .btn_close {
+    background-color: red;
+    text-align: center;
+    width: 75px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  input {
+    width: 130px;
+  }
+  h1{
+    font-size: 1.5rem;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 415px) {
+ table {
+    font-size: 1rem;
+  }
+  #date {
+    min-width: 90px;
+  }
+}
