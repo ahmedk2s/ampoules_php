@@ -1,5 +1,11 @@
 <?php
 session_start();
+
+if (!isset($_SESSION["user"])) {
+    header("Location: index.php");
+    exit();
+}
+var_dump($_SESSION);
 if ($_POST) {
     if (
         isset($_POST['la_date'])
@@ -42,7 +48,7 @@ if ($_POST) {
 <body>
 
     <ul>
-        <li id="connexion"> <?= $_SESSION["user"]["first_name"] ?></li>
+       
         <li><a href="deconnexion.php">Deconnexion</a></li>
     </ul>
 
@@ -93,7 +99,6 @@ if ($_POST) {
 
             <tbody>
                 <?php
-                // pour chaque résultat de la variable result, on affiche le stagiaire dans le tableau
                 foreach ($result as $ampoules) {
                     // print_r($ampoules)
                 ?>
@@ -129,30 +134,6 @@ if ($_POST) {
 
                         </div>
                     </div>
-                    <!-- <div class="modal" id="modal3" role="dialog">
-
-                        <h2>Modifier</h2>
-                        <form method="post">
-
-                            <label for="la_date"></label>
-                            <input type="date" value="<?= $ampoules['la_date'] ?>" name="la_date" required>
-
-
-                            <label for="etage"></label>
-                            <input type="text" value="<?= $ampoules['etage'] ?>" name="etage" required>
-
-
-                            <label for="la_position"></label>
-                            <input type="text" value="<?= $ampoules['la_position'] ?>" name="la_position" required>
-
-
-                            <label for="le_prix"></label>
-                            <input type="text" value="<?= $ampoules['le_prix'] ?>" name="le_prix" required>
-
-                            <input type="hidden" value="<?= $ampoules['id'] ?>" name="id">
-                            <input id="send" type="submit" value="Modifier">
-                        </form>
-                    </div> -->
                 <?php
                 }
                 ?>
